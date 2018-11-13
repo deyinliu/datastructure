@@ -1,7 +1,7 @@
 #include "iostream"
 #include "./main/base.h"
 template <class T>
-void fill(T *arr , int start , int end , const T value){ 
+void fill(T *arr , int start , int end , const T& value){ 
     for(int i = start; i < end; i++)
     {
         arr[i] = value;

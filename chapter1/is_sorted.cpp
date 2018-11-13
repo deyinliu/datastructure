@@ -1,6 +1,6 @@
 #include "iostream"
 #include "./main/base.h"
-
+using namespace std;
 template <class T>
 bool is_sorted(T *array , int n){
     int increase = 0;
@@ -33,6 +33,7 @@ int main(int argc, char const *argv[])
 {
     int arr[] = {1,2,3,2,4,5};
     bool isSorted = is_sorted(arr , count(arr));
-    printf("%d\n",isSorted);
+    cout <<isSorted<<endl;
+    cout <<isSorted<<endl;
     return 0;
 }
