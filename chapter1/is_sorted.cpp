@@ -7,7 +7,7 @@ bool is_sorted(T *array , int n){
     int descend = 0;
     for (int j = 0; j < n-1; j++) {
         if(array[j]>array[j+1]){
-            increase = 1;
+            increase=1;
             break;
         }
     }
@@ -31,9 +31,9 @@ bool is_sorted(T *array , int n){
 
 int main(int argc, char const *argv[])
 {
-    int arr[] = {1,2,3,2,4,5};
+    int arr[] = {4,4,4,4,4,4};
     bool isSorted = is_sorted(arr , count(arr));
     cout <<isSorted<<endl;
-    cout <<isSorted<<endl;
+    // cout <<isSorted<<endl;
     return 0;
 }
