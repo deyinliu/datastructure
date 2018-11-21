@@ -2,8 +2,7 @@
 #include "vector"
 using namespace std;
 int temp[10000];
-int main()
-{
+int main(){
     int n, k;
     cin >> n;
     vector<int> v(n);
