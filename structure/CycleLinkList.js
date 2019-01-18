@@ -2,7 +2,6 @@ class Node {
     constructor(data) {
         this.data = data;
         this.next = null;
-        this.prev = null;
     }
 }
 class DoubleLinkList {
@@ -12,17 +11,16 @@ class DoubleLinkList {
     }
     add(data) {
         let node = new Node(data);
-        let head = this.head;
-        let prev = head;
+        let next = this.head;
         if (!head) {
             this.head = node;
+            node.next = this.head;
         } else {
-            while (head.next) {
-                head = head.next;
-                prev = head
+            while (next.next != this.head) {
+                next = next.next;
             }
-            head.next = node;
-            node.prev = prev
+            next.next = node;
+            node.next = this.head;
         }
         this.length++;
     }
