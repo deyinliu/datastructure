@@ -9,7 +9,6 @@ function removeValue(head, value) {
         pre = head;
         pre.next = null;
         head = head.next;
-
     }
     pre = head;
     let next = head ? head.next : head;

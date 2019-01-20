@@ -25,6 +25,14 @@ class BiTree {
             }
         }
     }
+    travel() {
+        let cur = this.root;
+        let left = null;
+        let parent = null;
+        while (cur) {
+            cur = cur.left
+        }
+    }
     _position(cur, data) {
         let point = null;
         while (cur) {
