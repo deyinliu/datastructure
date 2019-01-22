@@ -1,14 +1,15 @@
 class Node {
-    constructor(data, left = null, righ = null, parent = null) {
+    constructor(data, left = null, right = null, parent = null) {
         this.data = data;
         this.left = left;
-        this.righ = righ;
+        this.right = right;
         this.parent = parent;
     }
 }
 class BiTree {
     constructor() {
         this.root = null;
+        this.str = "";
     }
     add(data) {
         let cur = this.root;
@@ -21,11 +22,20 @@ class BiTree {
             if (data <= cur.data) {
                 cur.left = node;
             } else {
-                cur.righ = node;
+                cur.right = node;
             }
         }
     }
+    inOrderRecur(head) {
+        // let head = this.root;
+        if (head == null) {
+            return;
+        }
+        this.inOrderRecur(head.left);
+        this.str += head.data + " ";
+        this.inOrderRecur(head.right);
 
+    }
     _position(cur, data) {
         let point = null;
         while (cur) {
@@ -33,13 +43,11 @@ class BiTree {
             if (data <= cur.data) {
                 cur = cur.left;
             } else {
-                cur = cur.righ;
+                cur = cur.right;
             }
         }
         return point;
     }
 }
 
-let tree = new BiTree();
-[5, 4, 7, 2, 8, 3, 6, 3, 1].forEach(v => tree.add(v));
-console.log(tree.root.righ);
+module.exports = { BiTree };
