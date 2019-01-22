@@ -101,18 +101,6 @@ class BiTree {
         }
         return str.slice(0, -1);
     }
-    _position(cur, data) {
-        let point = null;
-        while (cur) {
-            point = cur;
-            if (data <= cur.data) {
-                cur = cur.left;
-            } else {
-                cur = cur.right;
-            }
-        }
-        return point;
-    }
 }
 
 module.exports = { BiTree };
