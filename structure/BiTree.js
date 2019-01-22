@@ -18,12 +18,20 @@ class BiTree {
         if (!cur) {
             this.root = node;
         } else {
-            cur = this._position(cur, data);
-            node.parent = cur;
-            if (data <= cur.data) {
-                cur.left = node;
+            let pre = null;
+            while (cur) {
+                pre = cur;
+                if (cur.data >= data) {
+                    cur = cur.left;
+                } else {
+                    cur = cur.right;
+                }
+            }
+            node.parent = pre;
+            if (data <= pre.data) {
+                pre.left = node;
             } else {
-                cur.right = node;
+                pre.right = node;
             }
         }
     }
