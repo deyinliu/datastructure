@@ -7,7 +7,7 @@ class Node {
         this.right = null;
     }
 }
-
+// 递归解法
 function serialByPre(root) {
     if (!root) {
         return "#!";
@@ -17,7 +17,7 @@ function serialByPre(root) {
     res += serialByPre(root.right);
     return res;
 }
-
+// 迭代解法
 function serialByPre2(root) {
     if (!root) {
         return "#!";
@@ -44,7 +44,7 @@ let str = serialByPre(tree.root);
 console.log(str);
 str = serialByPre2(tree.root);
 console.log(str);
-
+// 递归解法
 function reconByPreString(arr) {
     let val = arr.shift();
     if (val == "#") {
@@ -55,7 +55,7 @@ function reconByPreString(arr) {
     head.right = reconByPreString(arr);
     return head;
 }
-
+// 迭代解法
 function reconByPreString2(arr) {
     let val = arr.shift();
     let head = generateNode(val);
