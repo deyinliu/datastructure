@@ -4,11 +4,11 @@ function recursive(i) {
     }
     console.log("in:", i);
     let a = i - 1;
-    // let b = i - 1;
+    let b = i - 1;
     recursive(a);
-    // recursive(b);
+    recursive(b);
     console.log("a:", a, new Date().getTime());
-    // console.log("b:", b, new Date().getTime());
+    console.log("b:", b, new Date().getTime());
 }
 
 function hannuo(n, from, buff, to) {
